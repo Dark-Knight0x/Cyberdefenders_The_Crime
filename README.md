@@ -38,20 +38,23 @@ By analyzing installed applications and extracted APK artifacts, we identified t
 ```
 #### Answer :
 
-<img width="282" height="55" alt="image" src="https://github.com/user-attachments/assets/ce8c3e43-8acd-4d2a-882a-bf38f82a6379" />
+<img width="1003" height="201" alt="image" src="https://github.com/user-attachments/assets/1edd2430-20c6-47e5-9c7a-67aae198b56f" />
+
 
 To determine the trading application used by the victim, we navigated to the `/data/app` directory within the extracted Android file system. This directory contains installed third-party applications.
 
 Among the installed applications, we identified `ticno.olymptrade`, which is associated with a trading platform. Another application present was Discord; however, it was unrelated to the trading activity described in the case scenario.
 
-![image](https://hackmd.io/_uploads/ByZlZYtuZe.png)
+<img width="993" height="174" alt="image" src="https://github.com/user-attachments/assets/a27dc676-58cf-4f32-b731-943e3d43193c" />
+
 
 We then navigated into the directory of `ticno.olymptrade` to locate the corresponding APK file. Inside the folder, we found the file `base.apk`, which represents the primary installation package of the application.
 
 After extracting the `base.apk` file, we calculated its SHA256 hash value to identify the exact application version used by the victim.
 
 The resulting SHA256 hash was:
-![image](https://hackmd.io/_uploads/rJg9v-KFu-e.png)
+<img width="1222" height="80" alt="image" src="https://github.com/user-attachments/assets/362db679-1aa8-4c3b-b87b-abd499fcad33" />
+
 
 
 
@@ -70,7 +73,8 @@ The total amount owed by the victim was:
 
 To verify the exact debt amount, we examined the mmssms.db file, which stores SMS and MMS data on the device.
 
-![image](https://hackmd.io/_uploads/H1dMVtF_-g.png)
+<img width="2558" height="459" alt="image" src="https://github.com/user-attachments/assets/ff7bc18b-bdc6-4736-b99b-cf8a016db500" />
+
 
 The mmssms.db database contains:
 
@@ -102,7 +106,8 @@ Analysis of communication records revealed the name of the individual to whom th
 
 #### Answer
 
-![image](https://hackmd.io/_uploads/B1vVSYYuZe.png)
+<img width="1888" height="189" alt="image" src="https://github.com/user-attachments/assets/4cbdbea5-2e4a-404c-8d6c-a0c7ac6412e2" />
+
 
 From the previous analysis of the mmssms.db database, we identified that the threatening message was associated with sender ID 6 in the SMS table.
 
@@ -112,7 +117,8 @@ The `contacts2.db` file stores contact information from the device, including:
 👤 Contact names
 📞 Phone numbers
 
-![image](https://hackmd.io/_uploads/S1r58ttuZg.png)
+<img width="1885" height="649" alt="image" src="https://github.com/user-attachments/assets/774f1fcc-5ac1-492b-8147-c0d2ace6ab75" />
+
 
 By correlating the sender ID from the SMS database with the contact information stored in contacts2.db, we confirmed that the creditor demanding repayment was Shady Wahab.
 
@@ -143,7 +149,8 @@ We then examined system snapshot data located at:
 
 `/data/system_ce/0/snapshots/`
 
-![6](https://hackmd.io/_uploads/SJ_95FKu-x.jpg)
+<img width="1440" height="3120" alt="image" src="https://github.com/user-attachments/assets/0560f71f-391d-4d15-bb86-9ef248db42d5" />
+
 
 
 ---
@@ -168,7 +175,8 @@ We then checked the device’s download directory:
 
 In this folder, we discovered an image containing the victim’s flight details, which clearly showed a booking to Las Vegas.
 
-![image](https://hackmd.io/_uploads/rk4IaKtOZe.png)
+<img width="1421" height="461" alt="image" src="https://github.com/user-attachments/assets/033d04ba-22c3-4b9e-a268-6e140c808b31" />
+
 
 
 
@@ -199,7 +207,8 @@ Inside this directory, we identified a file named a, which is a SQLite database 
 Upon examining this database, we discovered cached data containing a reference to:
 
 The Mob Museum
-![image](https://hackmd.io/_uploads/By6P0KK_Wl.png)
+<img width="1882" height="202" alt="image" src="https://github.com/user-attachments/assets/5119093f-a148-4a3a-97c5-7c745a69d63d" />
+
 
 ---
 
