@@ -12,6 +12,7 @@ The objective was to reconstruct the victim’s financial situation, movements, 
 `Category: Endpoint Forensics` 
 
 `Tools Used:  DB Browser for SQLite  `
+Link Assignment : [the-crime](URL(https://cyberdefenders.org/blueteam-ctf-challenges/the-crime/)")
 
 ---
 
